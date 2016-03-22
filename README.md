@@ -12,6 +12,7 @@ Completed:
 * [x] Required: ls
 * [x] Optional: ls with a recursive option, -R
 * [x] Required: mkdir
+* [x] Optional: mkdir with recursive functionality
 * [x] Required: rm 
 
 Walkthrough Gif:

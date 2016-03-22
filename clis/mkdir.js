@@ -7,9 +7,16 @@ let path = require('path')
 function* mkdir() {
     // Use 'yield' in here
     // Your implementation here
-    let filename = process.argv[2]
-    let rootPath = path.join(__dirname, filename)
-    yield fs.mkdir(rootPath)
+    let filenames = process.argv[2].split('/')
+    console.log(filenames)
+    let rootPath = __dirname
+    for(let file of filenames){
+    	if(file == '.' || file == ''){continue; }
+    	rootPath = path.join(rootPath, file)
+    	yield fs.mkdir(rootPath)
+    }
+
+    
   
 }
 
