@@ -9,7 +9,7 @@ function* mkdir() {
     // Your implementation here
     let filename = process.argv[2]
     let rootPath = path.join(__dirname, filename)
-    let fileNames = yield fs.mkdir(rootPath)
+    yield fs.mkdir(rootPath)
   
 }
 
